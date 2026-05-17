@@ -1,23 +1,27 @@
 package br.com.tdspk.motorista;
 
+import br.com.tdspk.veiculo.Veiculo;
+
 public class Motorista {
     private String nome;
     private String cpf;
     private String celular;
     private String habilitacao;
     private String categoria;
+    private Veiculo veiculo;
 
     public Motorista(String nome, String cpf){
         this.nome = nome;
         this.cpf = cpf;
     }
 
-    public Motorista(String nome, String cpf, String celular, String habilitacao, String categoria){
+    public Motorista(String nome, String cpf, String celular, String habilitacao, String categoria, Veiculo veiculo){
         this.nome = nome;
         this.cpf = cpf;
         this.celular = celular;
         this.habilitacao = habilitacao;
         this.categoria = categoria;
+        this.veiculo = veiculo;
     }
 
     public String getNome() {
@@ -58,5 +62,13 @@ public class Motorista {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
 }

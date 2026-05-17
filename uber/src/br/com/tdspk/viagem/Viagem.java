@@ -1,5 +1,8 @@
 package br.com.tdspk.viagem;
 
+import br.com.tdspk.cliente.Cliente;
+import br.com.tdspk.motorista.Motorista;
+
 import java.time.LocalDate;
 
 public class Viagem {
@@ -8,13 +11,17 @@ public class Viagem {
     private String origem;
     private String destino;
     private String formaPagamento;
+    private Cliente cliente;
+    private Motorista motorista;
 
-    public Viagem(LocalDate data, double valor, String origem, String destino, String formaPagamento) {
+    public Viagem(LocalDate data, double valor, String origem, String destino, String formaPagamento, Cliente cliente, Motorista motorista) {
         this.data = data;
         this.valor = valor;
         this.origem = origem;
         this.destino = destino;
         this.formaPagamento = formaPagamento;
+        this.cliente = cliente;
+        this.motorista = motorista;
     }
 
     public LocalDate getData() {
@@ -55,5 +62,21 @@ public class Viagem {
 
     public void setDestino(String destino) {
         this.destino = destino;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Motorista getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Motorista motorista) {
+        this.motorista = motorista;
     }
 }
