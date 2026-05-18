@@ -39,6 +39,6 @@ public class Cliente {
     }
 
     public String toString() {
-        return this.nome;
+        return "nome: " + this.nome;
     }
 }

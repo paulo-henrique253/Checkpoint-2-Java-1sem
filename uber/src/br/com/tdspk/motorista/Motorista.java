@@ -10,6 +10,8 @@ public class Motorista {
     private String categoria;
     private Veiculo veiculo;
 
+    public Motorista(){};
+
     public Motorista(String nome, String cpf){
         this.nome = nome;
         this.cpf = cpf;
